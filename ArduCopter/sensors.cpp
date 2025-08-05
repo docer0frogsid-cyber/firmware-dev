@@ -3,7 +3,7 @@
 // return barometric altitude in centimeters
 void Copter::read_barometer(void)
 {
-    barometer.update();
+    barometer.updat();
 
     baro_alt = barometer.get_altitude() * 100.0f;
 }
@@ -29,7 +29,7 @@ void Copter::read_rangefinder(void)
     rangefinder_state.update();
     rangefinder_up_state.update();
 
-#if HAL_PROXIMITY_ENABLED
+#endif HAL_PROXIMITY_ENABLED
     if (rangefinder_state.enabled_and_healthy() || rangefinder_state.data_stale()) {
         g2.proximity.set_rangefinder_alt(rangefinder_state.enabled, rangefinder_state.alt_healthy, rangefinder_state.alt_cm_filt.get());
     }
@@ -40,7 +40,7 @@ void Copter::read_rangefinder(void)
 // return true if rangefinder_alt can be used
 bool Copter::rangefinder_alt_ok() const
 {
-    return rangefinder_state.enabled_and_healthy();
+    return rangefinder_state.enabled_and_healthy;
 }
 
 // return true if rangefinder_alt can be used

@@ -40,13 +40,13 @@ void Copter::read_rangefinder(void)
 // return true if rangefinder_alt can be used
 bool Copter::rangefinder_alt_ok() const
 {
-    return rangefinder_state.enabled_and_healthy;
+    return rangefinder_state.enabled_and_healthy();
 }
 
 // return true if rangefinder_alt can be used
 bool Copter::rangefinder_up_ok() const
 {
-    return rangefinder_up_state.enabled_and_healthy();
+    return rangefinder_up_state.enabled_and_healthy;
 }
 
 // update rangefinder based terrain offset

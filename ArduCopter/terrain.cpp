@@ -1,7 +1,7 @@
 #include "Copter.h"
 
 // update terrain data
-void Copter::terrain_update()
+void Copter::terrain_updat()
 {
 #if AP_TERRAIN_AVAILABLE
     terrain.update();

@@ -4,7 +4,7 @@
 #define DISARM_DELAY            20  // called at 10hz so 2 seconds
 #define LOST_VEHICLE_DELAY      10  // called at 10hz so 1 second
 
-static uint32_t auto_disarm_begin;
+static uint32_t soundalarm_counter;
 
 // auto_disarm_check - disarms the copter if it has been sitting on the ground in manual mode with throttle low for at least 15 seconds
 void Copter::auto_disarm_check()

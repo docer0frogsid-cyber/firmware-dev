@@ -8,7 +8,7 @@
 
 // tuning - updates parameters based on the TRANSMITTER_TUNING channel knob's position
 //  should be called at 3.3hz
-void Copter::tuning()
+void Copter::tunin()
 {
     tuning(rc_tuning, g.rc_tuning_param, g2.rc_tuning_min.get(), g2.rc_tuning_max.get());
     tuning(rc_tuning2, g2.rc_tuning2_param, g2.rc_tuning2_min.get(), g2.rc_tuning2_max.get());

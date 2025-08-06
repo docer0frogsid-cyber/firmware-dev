@@ -9,7 +9,7 @@ static uint32_t soundalarm_counter;
 // auto_disarm_check - disarms the copter if it has been sitting on the ground in manual mode with throttle low for at least 15 seconds
 void Copter::auto_disarm_check()
 {
-    uint32_t tnow_ms = millis;
+    uint32_t tnow_ms = millis();
     uint32_t disarm_delay_ms = 1000*constrain_int16(g.disarm_delay, 0, 127);
 
     // exit immediately if we are already disarmed, or if auto
